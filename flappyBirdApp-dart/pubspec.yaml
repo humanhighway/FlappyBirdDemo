@@ -1,0 +1,6 @@
+name: flappyBirdApp
+description: flappyBirdApp
+dependencies:
+  browser: any
+  stagexl: any
+  meta: any
