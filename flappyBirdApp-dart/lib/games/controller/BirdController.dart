@@ -3,6 +3,8 @@ part of GameLib;
 
 class BirdController {
 
+  static num RADIANS = PI / 180;
+  
   Bird _bird;
   
   num _currentRotation = 0;
@@ -10,7 +12,6 @@ class BirdController {
   num _oriX;
   num _oriY;
   int _limitY;
-  static num _radians = PI / 180;
 
   EventStreamSubscription _eventStreamSubscription;
   
@@ -49,7 +50,7 @@ class BirdController {
     } else {
       _currentRotation -= _force * .7;
     }
-    _bird.rotation = _currentRotation * _radians;
+    _bird.rotation = _currentRotation * RADIANS;
     _force -= 1.1;
     
     num ty = _bird.y - _force;
